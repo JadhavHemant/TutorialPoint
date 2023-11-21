@@ -48,9 +48,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${Image})` }}>
+      <div className=' bg-gradient-to-b from-[#ffffff86] p-3 to-[rgb(34,250,250)] h-screen' >
         <div className="flex items-center justify-center min-h-screen">
-          <div className="bg-gradient-to-r from-green-400 to-blue-500 p-8 rounded-lg shadow-md max-w-md w-full">
+          <div className="bg-gradient-to-t from-[white] to-[#fd9002] p-8 rounded-lg shadow-md max-w-md w-full">
             <h1 className="text-2xl font-bold mb-4">Login</h1>
             <hr className="my-2 border border-gray-400" />
 

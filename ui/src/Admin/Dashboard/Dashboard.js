@@ -94,7 +94,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="bg-gray-100 min-h-screen p-8">
+        <div className="min-h-screen p-8">
             <h1 className="text-3xl mb-4 text-gray-800">❉ Dashboard ❉</h1>
             <div className="mb-8">
                 <div className="bg-white rounded-lg p-4">
@@ -108,7 +108,7 @@ const Dashboard = () => {
                         {
                             toggle ? (
                                 <button
-                                    onClick={() => updateInstruction()} className="bg-blue-500 text-white px-4 py-2 rounded-md">Update</button>
+                                    onClick={() => updateInstruction()} className="bg-[orange] text-white px-4 py-2 rounded-md">Update</button>
                             ) : 
                                 <button onClick={() => addInstruction()} className="bg-green-500 text-white px-4 py-2 rounded-md">Submit</button>
             }

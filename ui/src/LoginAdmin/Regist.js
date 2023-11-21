@@ -66,9 +66,9 @@ const AddStudent = () => {
 
   return (
     <>
-    <div className='bg-gradient-to-r to-white-500  from-[#46f0fc]  to-[#fcfafb]'> 
+    <div  className=' bg-gradient-to-b from-[#ffffff86] p-3 to-[rgb(34,250,250)] h-screen' > 
      <div className="container mx-auto p-6">
-  <div className="bg-gradient-to-r from-pink-500 to-yellow-500 p-6 rounded-lg shadow-md max-w-sm mx-auto">
+  <div className="mx-[400px] bg-gradient-to-t from-[white] to-[#fd9002] p-4  rounded-lg shadow-md max-w-md w-full">
     <h1 className="text-xl text-center mb-6">Student Register</h1>
     <hr className="mb-6" />
 
