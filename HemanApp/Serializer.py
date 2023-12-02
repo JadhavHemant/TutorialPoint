@@ -33,4 +33,30 @@ class VideoSerializer(serializers.ModelSerializer):
     chapter_id=PrimaryKeyRelatedField(queryset=ChapterModel.objects.all(),many=False)
     class Meta:
         model=VideoTutorial
-        fields=['id','chapter_id','video_tutorial',"video_caption"]        
+        fields=['id','chapter_id','video_tutorial',"video_caption"]   
+        
+class StudentExamSerializer(serializers.ModelSerializer):
+    student_id=PrimaryKeyRelatedField(queryset=StudentModel.objects.all(),many=False)
+    class Meta:
+        model=CandidateExamModel
+        fields=['id','student_id','exam_date','exam_start_time','exam_end_time','exam_status']
+ 
+class ExamSerializer(serializers.ModelSerializer):
+    exam_id=PrimaryKeyRelatedField(queryset=StudentModel.objects.all(),many=False)
+    class Meta:
+        model=ExamQuestionModel
+        fields=["id","exam_id","question_id","submit_option_number"]         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+             

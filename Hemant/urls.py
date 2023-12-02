@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from HemanApp.Apis import DashRestApi,StudentRestApi,SubjectRestApi,ChapterRestApi,TutorialRestApi,VideoRestApi
+from HemanApp.Apis import DashRestApi,StudentRestApi,SubjectRestApi,ChapterRestApi,TutorialRestApi,VideoRestApi,ExamRestApi
 
 urlpatterns = [
      # Dashboard urls
@@ -45,4 +45,7 @@ urlpatterns = [
     path('api/video',VideoRestApi.VideoApi.as_view()),
     path('api/video/update/delete/<int:id>/',VideoRestApi.DeleteUpdateVideo.as_view()),
     path('api/video/id/<int:id>/',VideoRestApi.VideoIdWiseApi.as_view()),
+    
+    path('api/exam',ExamRestApi.ExamQuestionApi.as_view()),
+    
 ]

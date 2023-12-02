@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Image from './Images/login.png';
+// import Image from './Images/login.png';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const Login = () => {

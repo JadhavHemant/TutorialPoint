@@ -82,3 +82,28 @@ class ContentQuestionsModel(models.Model):
         return self.question 
 
 
+# ----------------------------------------------------------------------------------------------------------
+class CandidateExamModel(models.Model):
+    Studednt_id=models.ForeignKey(StudentModel,related_name='candidate',on_delete=models.CASCADE)  
+    exam_date=models.CharField(max_length=100)
+    exam_start_time=models.CharField(max_length=100) 
+    exam_end_time=models.CharField(max_length=100)
+    exam_status=models.CharField(max_length=100)
+    class Meta: 
+        ordering=('id',)
+        db_table='Student_exam_details'
+    def __str__(self):
+        return self.exam_id 
+
+
+class ExamQuestionModel(models.Model):
+    exam_id=models.ForeignKey(CandidateExamModel,related_name='exam',on_delete=models.CASCADE)
+    question_id=models.ForeignKey(ContentQuestionsModel,related_name='exam',on_delete=models.CASCADE)
+    # Studednt_id=models.ForeignKey(StudentModel,related_name='exam',on_delete=models.CASCADE)  
+    submit_option_number=models.IntegerField()
+    class Meta:
+        ordering=('id',)
+        db_table='exam_quesion_result'  
+    def __str__(self):
+        return self.exam_question_id
+
